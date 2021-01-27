@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/itemInfo.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static 'javascript/itemInfo.js' %}"></script>
+
+    </head>
+    <body>
+        <div class="hidden">
+            <p class="INLen">{{imgNumslen}}</p>
+            <p class="INArr">{{imgNumArr}}</p>
+        </div>
+        {% if logged == admin %}
+        <div class="sideLinks">
+            <a href="/index">Home</a>
+            <a href="/editItem/{{item.id}}" class="link">Edit Item</a>
+        </div>
+        {% endif %}
+        <div class="outer">
+            <img class="arrow_left" src="{% static 'images/arrow.png' %}">
+            <div class="inWrapper">
+                <div class="inner">
+                    {% for num in item.imgNums %}
+                    {% for pic in allPics %}
+                    {% if num == pic.id %}
+                    <!-- <p id="{{pic.id}}">Hi there</p> -->
+                    <img class="image" id="{{ pic.id }}" src="{{ pic.image.url }}">
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="extra"></div>
+            <img class="arrow_right" src="{% static 'images/arrow.png' %}">
+        </div>
+        <div class="info">
+            <h1 class="title">{{item.title}}</h1>
+            <h4 class="description">{{item.description}}</h4>
+            <h3 class="price">${{item.price}}</h3>
+            <h3 class="button">Add to Cart</h3>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+body{
+    background-image: url("https://media3.giphy.com/media/smzfl3E7a4iHK/giphy.gif");
+}
+#wrapper{
+    height: fit-content;
+    width: fit-content;
+    margin-left: 170px;
+}
+#header{
+    height: 100px;
+    width: 915px;
+    border-bottom: .5px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+.border{
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    background-color: black;
+    margin-top: 10px;
+}
+.link{
+    color: white;
+    text-decoration: none;
+}
+.lorem{
+    color: white;
+}
+.leftHead{
+    height: 100px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.centerHead{
+    height: 60px;
+    width: 400px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+.rightHead{
+    height: 100px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.row{
+    height: fit-content;
+    width: 915px;
+    padding: 5px;
+    margin-top: 10px;
+    display: flex;
+}
+.desc{
+    height: 550px;
+    width: 400px;
+    border-left: .5px solid white;
+    margin-left: 20px;
+    padding: 30px;
+}
+.outline{
+    padding: 5px;
+    border-bottom: .5px solid white;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -160px;
+}
+.hoverElement{
+    height: 200px;
+    width: 260px;
+    background-color: grey;
+    text-align: center;
+    padding-top: 100px;
+    z-index: 2;
+    position: absolute;
+    opacity: .8;
+}
+.picLink{
+    z-index: 1;
+}
+.pics{
+    height: 550px;
+    width: 700px;
+    margin-right: 20px;
+}

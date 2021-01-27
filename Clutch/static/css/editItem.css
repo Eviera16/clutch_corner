@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    justify-content: space-evenly;
+}
+.left{
+    height: fit-content;
+    width: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right{
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+}
+
+.image{
+    height: 100px;
+    width: 100px;
+}
+
+.imgCol{
+    /* border: 1px solid black; */
+    width: 350px;
+}

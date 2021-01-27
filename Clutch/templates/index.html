@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'javascript/index.js' %}"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="leftHead">
+                <a href="/gallery" class="link">Gallery</a>
+                <a href="" class="link">Courses</a>
+            </div>
+            <div class="border">
+                <a href="/index"><img src="{% static 'images/IMG_1276.JPG' %}" class="centerHead"></a>
+            </div>
+            <div class="rightHead">
+                <a href="" class="link">Gadgets</a>
+                <a href="" class="link">Contact</a>
+                <a href="" class="link">FAQ</a>
+            </div>
+            {% if logged == admin %}
+            <a href="/addItem" class="link">Add Item</a>
+            {% else %}
+            <p>Logged In</p>
+            {% endif %}
+        </div>
+        {% if item %}
+        {% for num in item.imgNums %}
+        {% if num != None %}
+        <div class="outline">
+            <div class="box">
+                {% for pic in allImages %}
+                {% if pic.id == num %}
+                <img class="pics" src="{{ pic.image.url }}">
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="desc">
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sunt, ratione ullam nesciunt harum aliquid a suscipit aperiam aliquam sapiente eveniet fugit, animi provident alias magni, accusamus cupiditate quo magnam?</p>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        <a class="picLink" href="/imageInfo/1">Info</a>
+
+
+    </div>
+</body>
+
+</html>

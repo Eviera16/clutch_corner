@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+    </head>
+    <body>
+        <div id="login">
+            <h1>Login</h1>
+            <form class="form2" action="loginuser" method="post">
+                {% csrf_token %}
+                <div class="labelWrap">
+                    <label for="user_name">User Name: </label>
+                    <input name="user_name" type="text">
+                </div>
+                <div class="labelWrap">
+                    <label for="password">Password: </label>
+                    <input name="password" type="text">
+                </div>
+                <button type="submit">Login!</button>
+
+            </form>
+        </div>
+        <div id="errors">
+            {% if messages %}
+            <ul class="errorsList">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </body>
+</html>

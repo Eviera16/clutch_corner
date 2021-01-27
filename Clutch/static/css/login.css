@@ -1,0 +1,31 @@
+body{
+    background-image: url("https://media3.giphy.com/media/smzfl3E7a4iHK/giphy.gif");
+}
+#login{
+    height: fit-content;
+    width: fit-content;
+    margin-left: 500px;
+    margin-top: 160px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#errors{
+    margin-left: 500px;
+}
+
+.form2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.labelWrap{
+    margin-top: 15px;
+}
